@@ -1,0 +1,63 @@
+<!-- Header -->
+<header class="sticky top-0 flex justify-between items-center py-6 bg-background-light/30 dark:bg-background-dark/30 px-4
+    backdrop-blur-sm">
+  <a href="/" aria-label="Homepage" class="text-2xl font-bold tracking-tighter">{{ site.shortName }}</a>
+  <div
+    class="flex items-center gap-4">
+    <!-- Desktop Navigation -->
+    <nav class="hidden md:flex gap-6 text-sm" aria-label="Main navigation">
+      {% for item in site.mainNavigation %}
+        <a href="{{ item.url }}" class="hover:opacity-80 transition-opacity">{{ item.name }}</a>
+      {% endfor %}
+    </nav>
+    <!-- Mobile Menu Button -->
+    <button
+      id="menu-btn"
+      class="md:hidden p-2 z-50"
+      aria-label="Open menu"
+      aria-expanded="false"
+      aria-controls="mobile-menu">
+      <svg
+        id="menu-open-icon"
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="h-6 w-6">
+        <line x1="4" x2="20" y1="12" y2="12"/>
+        <line x1="4" x2="20" y1="6" y2="6"/>
+        <line x1="4" x2="20" y1="18" y2="18"/>
+      </svg>
+      <svg
+        id="menu-close-icon"
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="h-6 w-6 hidden">
+        <line x1="18" x2="6" y1="6" y2="18"/>
+        <line x1="6" x2="18" y1="6" y2="18"/>
+      </svg>
+    </button>
+  </div>
+  <!-- Mobile Menu -->
+  <div
+    id="mobile-menu"
+    class="hidden md:hidden absolute top-0 left-0 w-full h-screen bg-background-light dark:bg-background-dark">
+    <nav class="flex flex-col items-center justify-center h-full gap-8 text-2xl" aria-label="Mobile navigation">
+      {% for item in site.mainNavigation %}
+        <a href="{{ item.url }}" class="mobile-link hover:opacity-80 transition-opacity">{{ item.name }}</a>
+      {% endfor %}
+    </nav>
+  </div>
+</header>

@@ -1,0 +1,23 @@
+<!-- About Section -->
+<section id="about" class="py-20 border-t border-border-light dark:border-border-dark">
+  <div class="grid md:grid-cols-2 gap-10 items-center">
+    <div>
+      <h2 class="text-3xl font-bold mb-4">{{ about.title }}</h2>
+      <p class="text-muted-foreground-light dark:text-muted-foreground-dark mb-4">{{ about.textHtml | safe }}</p>
+    </div>
+    <div class="bg-muted-light dark:bg-muted-dark rounded-lg p-6 overflow-auto" aria-hidden="true">
+      <div class="text-sm text-muted-foreground-light dark:text-muted-foreground-dark min-w-[500px]">
+        <code>
+          <span class="text-green-700 dark:text-green-500">user@host</span>:<span class="text-blue-500">~</span>$ npx gurpreet<br/><br/>
+          <span class="font-bold">user@host</span><br/> -----------<br/>
+          {% for item in about.code %}
+            <dl class="flex mt-1 flex-nowrap">
+              <dt class="font-bold w-24">{{ item.label }}:</dt>
+              <dd>{{ item.value }}</dd>
+            </dl>
+          {% endfor %}
+        </code>
+      </div>
+    </div>
+  </div>
+</section>

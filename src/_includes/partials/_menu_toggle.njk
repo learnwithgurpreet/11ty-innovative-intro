@@ -1,0 +1,37 @@
+<!-- JavaScript for Menu Toggle -->
+<script>
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const openIcon = document.getElementById('menu-open-icon');
+  const closeIcon = document.getElementById('menu-close-icon');
+  const mobileLinks = document.querySelectorAll('.mobile-link');
+
+  const toggleMenu = () => {
+    const isExpanded = menuBtn.getAttribute('aria-expanded') === 'true';
+    menuBtn.setAttribute('aria-expanded', !isExpanded);
+    mobileMenu
+      .classList
+      .toggle('hidden');
+    openIcon
+      .classList
+      .toggle('hidden');
+    closeIcon
+      .classList
+      .toggle('hidden');
+    // Prevent scrolling when menu is open
+    document.body.style.overflow = isExpanded
+      ? ''
+      : 'hidden';
+  };
+
+  menuBtn.addEventListener('click', toggleMenu);
+
+  // Close menu when a link is clicked
+  mobileLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      if (!mobileMenu.classList.contains('hidden')) {
+        toggleMenu();
+      }
+    });
+  });
+</script>

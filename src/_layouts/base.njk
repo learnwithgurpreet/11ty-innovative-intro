@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang }}" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8">
+    <title>{{ site.title or title }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="google-site-verification" content="{{ site.googleSiteVerification }}"/>
+    <meta name="robots" content="index,follow"/>
+    <meta name="googlebot" content="index,follow"/>
+    <meta content="{{ keywords }}" name="keywords">
+    <meta content="{{ description }}" name="description">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/images/favicons/apple-touch-icon.png' }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/images/favicons/favicon-32x32.png' }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ '/assets/images/favicons/favicon-16x16.png' }}">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="canonical" href="{{ site.canonical }}">
+    <meta property="og:locale" content="{{ site.locale }}">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{{ title }}">
+    <meta property="og:description" content="{{ author.name }}, {{ author.title }}, {{ author.org }}">
+    <meta property="og:url" content="{{ site.url }}">
+    <meta property="og:site_name" content="{{ site.name }}">
+    <meta property="og:image" content="{{ author.image }}">
+    <meta property="og:image:width" content="500">
+    <meta property="og:image:height" content="500">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta content="All" name="audience">
+    <link rel="stylesheet" href="{{ '/assets/css/styles.css' | url }}">
+  </head>
+  <body class="antialiased">
+    <div class="container mx-auto py-4">
+      {% include "partials/_header.njk" %}
+      <main class="text-foreground-light dark:text-foreground-dark px-4">
+        {{ content | safe }}
+      </main>
+      {% include "partials/_footer.njk" %}
+    </div>
+    {% set menu_toggle %}{% include "menu_toggle.js" %}{% endset %}
+    <script>
+      // prettier-ignore
+      {{ menu_toggle | jsmin | safe }}
+    </script>
+  </body>
+</html>

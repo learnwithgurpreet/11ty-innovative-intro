@@ -1,0 +1,30 @@
+{
+  "name": "gurpreetsingh.me",
+  "shortName": "GS",
+  "url": "https://11ty-innovative-intro.netlify.app",
+  "canonical": "https://11ty-innovative-intro.netlify.app",
+  "googleSiteVerification": "google-site-verification-code",
+  "lang": "en",
+  "locale": "en_US",
+  "title": "Gurpreet Singh",
+  "themeColor": "#f8fafc",
+  "backgroundColor": "#031235",
+  "mainNavigation": [
+    {
+      "name": "About",
+      "url": "#about"
+    },
+    {
+      "name": "Projects",
+      "url": "#projects"
+    },
+    {
+      "name": "Skills",
+      "url": "#skills"
+    },
+    {
+      "name": "Contact",
+      "url": "#contact"
+    }
+  ]
+}

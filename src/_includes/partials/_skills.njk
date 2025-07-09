@@ -1,0 +1,16 @@
+<!-- Skills Section -->
+<section id="skills" class="py-20 border-t border-border-light dark:border-border-dark">
+  <h2 class="text-3xl font-bold mb-8 text-center">Technical Expertise</h2>
+  <ul class="flex flex-wrap justify-center gap-4">
+    {% for skill in skills %}
+      {% for tool in skill.tools %}
+        <li class="flex items-center subpixel-antialiased highlight rounded-full bg-muted-light dark:bg-muted-dark px-4 py-2 text-sm
+          font-medium">{{ tool.language }}
+          {% if tool.icon %}
+            {{ tool.icon | safe }}
+          {% endif %}
+        </li>
+      {% endfor %}
+    {% endfor %}
+  </ul>
+</section>

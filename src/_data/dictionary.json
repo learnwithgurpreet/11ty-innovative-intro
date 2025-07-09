@@ -1,0 +1,16 @@
+{
+  "hero": {
+    "primaryCta": {
+      "name": "View Projects",
+      "url": "#projects"
+    },
+    "secondaryCta": {
+      "name": "Get in Touch",
+      "url": "#contact"
+    }
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "builtWith": "Built with <span class=\"text-red-500 text-xl\" aria-label=\"love\">♥</span> and 11ty, Tailwind CSS."
+  }
+}

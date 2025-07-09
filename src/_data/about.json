@@ -1,0 +1,30 @@
+{
+  "title": "About Me",
+  "code": [
+    {
+      "label": "OS",
+      "value": "MacOS"
+    },
+    {
+      "label": "Location",
+      "value": "Frankfurt, Germany"
+    },
+    {
+      "label": "Role",
+      "value": "Senior Frontend Architect"
+    },
+    {
+      "label": "Skills",
+      "value": "React, NextJS, Node.js, 11ty, Tailwind CSS"
+    },
+    {
+      "label": "Focus",
+      "value": "Accessibility & Performance"
+    },
+    {
+      "label": "Motto",
+      "value": "\"Building a greener web 🌍🌱\""
+    }
+  ],
+  "textHtml": "I'm a senior frontend developer with a passion for creating performant and user-friendly web applications. My work is driven by a philosophy of simplicity and efficiency, focusing on clean code and maintainable systems. I thrive on solving complex problems and building tools that make a difference. <br/><br/> When I'm not coding, I enjoy contributing to open-source projects, writing technical blog posts, and engaging with the developer community."
+}
