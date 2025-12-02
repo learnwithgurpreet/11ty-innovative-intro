@@ -1,7 +1,7 @@
 {
-  "name": "Gurpreet Singh",
+  "name": "John Doe",
   "intro": "Crafting beautiful, responsive, and accessible web experiences. Inspired by the creativity and passion of the open-source community.",
-  "org": "Publicis Sapient",
-  "image": "/assets/images/gurpreet-singh.jpeg",
-  "title": "Senior Manager Experience Engineering"
+  "org": "Tech Innovators Inc.",
+  "image": "https://lipsum.app/500x500",
+  "title": "Lead Developer"
 }
