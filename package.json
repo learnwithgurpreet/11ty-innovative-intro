@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "engines": {
-    "node": "18.x"
+    "node": ">18.x"
   },
   "scripts": {
     "start": "npm-run-all -p dev:*",
@@ -15,7 +15,7 @@
     "build:css": "npx @tailwindcss/cli -i src/assets/css/tailwind.css -o _site/assets/css/styles.css --postcss"
   },
   "keywords": [],
-  "author": "Gurpreet Singh",
+  "author": "Gurpreet Singh <gurupreetsingh2000@gmail.com> (https://www.learnwithgurpreet.com)",
   "license": "MIT",
   "devDependencies": {
     "@11ty/eleventy": "^3.1.2",
