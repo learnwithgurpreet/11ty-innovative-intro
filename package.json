@@ -9,13 +9,15 @@
     "dev:11ty": "eleventy --serve",
     "dev:css": "npx @tailwindcss/cli -i src/assets/css/tailwind.css -o _site/assets/css/styles.css --watch --postcss",
     "build:11ty": "eleventy",
-    "build:css": "npx @tailwindcss/cli -i src/assets/css/tailwind.css -o _site/assets/css/styles.css --postcss"
+    "build:css": "npx @tailwindcss/cli -i src/assets/css/tailwind.css -o _site/assets/css/styles.css --postcss",
+    "postinstall": "npm rebuild @parcel/watcher || true"
   },
   "keywords": [],
   "author": "Gurpreet Singh <gurupreetsingh2000@gmail.com> (https://www.learnwithgurpreet.com)",
   "license": "MIT",
   "devDependencies": {
     "@11ty/eleventy": "^3.1.2",
+    "@parcel/watcher": "^2.5.6",
     "@tailwindcss/cli": "^4.1.11",
     "@tailwindcss/postcss": "^4.1.11",
     "esbuild": "^0.25.6",
